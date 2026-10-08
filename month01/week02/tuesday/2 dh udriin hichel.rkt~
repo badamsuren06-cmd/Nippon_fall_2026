@@ -1,0 +1,60 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |2 dh udriin hichel|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;;Boolean operation
+
+;;and, or, not
+(and (> 10 5) (< 3 1))
+(or (= 4 4) (> 2 9))
+(not (even? 7))
+(and (>= 75 60) (>= 90 80))
+;;Exercises01
+(check-expect (and #t #t) #t)
+(check-expect (and #t #f) #f)
+(check-expect (or #t #t) #t)
+(check-expect (or #t #f) #t)
+(check-expect (not #t) #f)
+(check-expect (not  #f) #t)
+(and (> 8 3) (even? 10)) 
+(or (< 1 0) (= 6 (+ 3 3))) 
+(not (positive? -2))
+(and (>= 60 60) (>= 79 80))
+;;Exercises02
+;; in-range? : Number -> Boolean
+;; n нь 1-ээс 10 хүртэл (хоёр талдаа орно) бол #t
+(define (in-range? n)
+  (and (>= n 1) (<= n 10)))
+(check-expect (in-range? 5) #t)
+(check-expect (in-range? 1) #t)    ; доод хил
+(check-expect (in-range? 10) #t)   ; дээд хил
+(check-expect (in-range? 0) #f)    ; доод хилийн гадна
+(check-expect (in-range? 11) #f)
+;;Exercises03
+;; teen? : Number -> Boolean
+;; age 13-аас 19 хүртэл (хоёр талдаа орно) бол #t
+(define (teen? age)
+  (and (>= age 13) (<= age 19)))
+(check-expect (teen? 13) #t)
+(check-expect (teen? 19) #t)
+(check-expect (teen? 12) #f)
+(check-expect (teen? 20) #f)
+;; weekend? : Number -> Boolean
+;; долоо хоногийн өдрийн дугаар (1 = Даваа ... 7 = Ням) 6 эсвэл 7 бол #t
+(define (weekend? day)
+  (or (= day 6) (= 7 day ))) 
+(check-expect (weekend? 6) #t)
+(check-expect (weekend? 7) #t)
+(check-expect (weekend? 5) #f)
+;; scholarship? : Number Number -> Boolean
+;; score 90 ба түүнээс дээш, attendance 80 ба түүнээс дээш бол #t
+(define (scholarship? score attendance)
+  (and (<= score 90) (>= attendance 80)))
+(check-expect (scholarship? 90 80) #t)
+(check-expect (scholarship? 89 100) #t)
+(check-expect (scholarship? 100 79) #f)
+;; not-passing? : Number -> Boolean
+;; Даваагийн passing-score?-г not-оор урвуулна
+(define (not-passing? a)
+  (not (> a 59)))
+(check-expect (not-passing? 59) #t)
+(check-expect (not-passing? 60) #f)
