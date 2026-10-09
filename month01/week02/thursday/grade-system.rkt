@@ -78,6 +78,8 @@
 ;; letter-grade : Number -> String
 ;; дундаж оноо → "A" "B" "C" "D" "F" (Мягмарын grade-тэй ижил дүрэм)
 
+(require 2htdp/image)
+
 (define (letter-grade grade)
   (cond
     [(>= grade 90) "A"]
@@ -101,3 +103,43 @@
 (check-expect (student-grade 80 90 70) "B")
 (check-expect (student-grade 100 90 80) "A")
 
+;; grade-color : Number -> String
+;; дундаж оноо → өнгө: 90+ "green", 80–89 "blue", 70–79 "gold", 60–69 "orange", бусад "red"
+
+(define (grade-color grade)
+  (cond
+    [(>= grade 90) "green"]
+    [(>= grade 80) "blue"]
+    [(>= grade 70) "gold"]
+    [(>= grade 60) "orange"]
+    [(<= grade 59) "red"]))
+(check-expect (grade-color 90) "green")
+(check-expect (grade-color 89) "blue")
+(check-expect (grade-color 60) "orange")
+(check-expect (grade-color 59) "red")
+
+;; grade-badge : Number -> Image
+;; дундаж оноо → өнгөт тойрог дээр цагаан үсгэн дүн.
+;; grade-color, letter-grade-г дуудна.
+
+(define (grade-badge score)
+  (overlay (text (letter-grade score) 24 "white")
+           (circle 30 "solid" (grade-color score))))
+
+(check-expect (grade-badge 95) (overlay (text "A" 24 "white") (circle 30 "solid" "green")))
+(check-expect (grade-badge 59) (overlay (text "F" 24 "white") (circle 30 "solid" "red")))
+
+;; student-card : Number Number Number Number Number Number -> Image
+;; s1 s2 s3 attendance completed total → тэмдэг, хажууд нь final-status-ийн текст.
+;; average3, grade-badge, final-status-г дуудна.
+
+(require 2htdp/image)
+
+(define (student-card s1 s2 s3 attendance complet total)
+  (beside (grade-badge (average3 s1 s2 s3))
+          (text (final-status s1 s2 s3 attendance complet total)
+                20
+                "black")))
+
+(check-expect (student-card 80 90 70 85 8 10)
+              (beside (grade-badge 80) (text "Eligible" 20 "black")))
