@@ -1,0 +1,13 @@
+(define (count-passing scores)
+  (cond
+    [(empty? scores) 0]
+    [(>= (first scores) 60)
+     (+ 1 (count-passing (rest scores)))]
+    [else (count-passing (rest scores))]))
+    
+(check-expect (count-passing (list 60 59)) 1)  
+
+= (+ 1 (count-passing (list 59)))     ; 60 >= 60 → тоологдоно
+= (+ 1 (count-passing empty))         ; 59 < 60 → тоологдохгүй
+= (+ 1 0)
+= 1                                   ; 1 хүүхэд тэнцсэн бай
