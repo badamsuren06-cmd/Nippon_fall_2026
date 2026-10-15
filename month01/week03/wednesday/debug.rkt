@@ -1,3 +1,44 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname debug) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; 1. Base case-ийн утга буруу
+(define (contains-1? target l)
+  (cond [(empty? l) #f]
+        [else (or (= (first l) target) (contains-1? target (rest l)))]))
+(check-expect (contains-1? 4 (cons 3 empty)) #f)
+
+;; 2. Хил буруу: тэнцүүг тоолж байна
+(define (count-greater-than-2 l limit)
+  (cond [(empty? l) 0]
+        [(> (first l) limit) (+ 1 (count-greater-than-2 (rest l) limit))]
+        [else (count-greater-than-2 (rest l) limit)]))
+(check-expect (count-greater-than-2 (cons 5 empty) 5) 0)
+
+;; 3. NEList-ийг хоосон list шиг бичсэн
+(define (find-max-3 l)
+  (cond
+    [(empty? (rest l)) (first l)]
+    [else (max (first l) (find-max-3 (rest l)))]))
+(check-expect (find-max-3 (cons -5 (cons -2 empty))) -2)
+
+;; 4. Эхний элементийг алгассан
+(define (sum number)
+  (cond
+    [(empty? (rest number)) (first number)]
+    [else (+ (first number) (sum (rest number)))]))
+(define (count-items number)
+  (cond
+    [(empty? number) 0]
+    [else (+ 1 (count-items (rest number)))]))
+(define (average-4 l)
+  (/ (sum l) (count-items l)))
+(check-expect (average-4 (cons 60 (cons 80 empty))) 70)
+
+;; 5. Буруу зургийн function
+(require 2htdp/image)
+(define (stack-all-5 images)
+  (cond
+    [(empty? images) empty-image]
+    [else (above (first images) (stack-all-5 (rest images)))]))
+(check-expect (stack-all-5 (cons (circle 10 "solid" "red") (cons (circle 10 "solid" "blue") empty)))
+              (above (circle 10 "solid" "red") (circle 10 "solid" "blue")))
