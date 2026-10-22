@@ -1,0 +1,21 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname review) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; sum-digits-3 : Number -> Number
+;; гурван оронтой тооны цифрүүдийн нийлбэр. remainder, quotient ашигла.
+(define (sum-digits-3 numbers)
+  (+ (quotient numbers 100)                 
+     (remainder (quotient numbers 10) 10)    
+     (remainder numbers 10)))
+
+(check-expect (sum-digits-3 507) 12)
+(check-expect (sum-digits-3 100) 1)
+(check-expect (sum-digits-3 999) 27)
+
+;; quiz-gap : Student -> Number
+;; quiz ба project онооны зөрүү (үргэлж эерэг). abs ашигла.
+(define (quiz-gap quiz project)
+  
+(check-expect (quiz-gap aki) 10)
+(check-expect (quiz-gap sora) 0)
+(check-expect (quiz-gap (make-student "Zul" 90 70)) 20)
