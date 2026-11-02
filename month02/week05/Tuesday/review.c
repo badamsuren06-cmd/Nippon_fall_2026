@@ -5,7 +5,6 @@ int square_sum(int a, int b)
     return a * a + b * b;
 }
 
-// int ба tens_digit хоорондын зайг зассан
 int tens_digit(int n) {
     return (n / 10) % 10;
 }
