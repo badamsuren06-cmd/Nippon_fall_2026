@@ -30,7 +30,6 @@ int in_range(int x, int lo, int hi) {
     return 0;
 }
 
-// Энэ main функц заавал байх ёстой!
 int main(void) {
     printf("is_passing(60.0) = %d\n", is_passing(60.0));
     printf("letter_grade(92.6) = %c\n", letter_grade(92.6));
