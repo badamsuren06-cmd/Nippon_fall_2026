@@ -48,13 +48,13 @@ int selectionSort(int a[], int n)
         {
             int t = a[i];
             a[i] = a[minIndex];
-            a[minIndex];
+            a[minIndex] = t;
             swaps = swaps +1;
         }
-        return swaps;
+        
 
     }
-    
+    return swaps;
 
 }
 
@@ -72,6 +72,14 @@ void printBars(int a[], int n)
     }
 
 
+}
+
+void checkInt(int actual, int expected) {
+    if (actual == expected) {
+        printf("PASS: Expected %d, got %d\n", expected, actual);
+    } else {
+        printf("FAIL: Expected %d, but got %d\n", expected, actual);
+    }
 }
     
 
@@ -100,7 +108,7 @@ int main(void)
 
     printf("--- 3B: ---\n");
     int scores[5] = {70, 82, 95, 63, 88};
-    bubblesort(scores, 5);
+    bubbleSort(scores, 5);
     printBars(scores, 5);
 
     return 0;
