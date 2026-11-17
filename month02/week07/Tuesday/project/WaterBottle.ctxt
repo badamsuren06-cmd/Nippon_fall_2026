@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=WaterBottle
+comment0.text=\n\ Write\ a\ description\ of\ class\ WaterBottle\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=sipMl
+comment1.target=void\ takeSip(int)
+comment2.params=
+comment2.target=void\ refillFull()
+comment3.params=
+comment3.target=double\ getPercentFull()
+numComments=4

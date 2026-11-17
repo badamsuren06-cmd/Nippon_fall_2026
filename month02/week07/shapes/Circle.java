@@ -18,7 +18,10 @@ public class Circle {
         color = "blue";
         isVisible = false;
     }
-
+    public double getArea(){
+        double radius = diameter / 2.0;
+        return Math.PI * radius * radius;
+    }
     /** Тойргийг харагддаг болгоно. */
     public void makeVisible() {
         isVisible = true;
