@@ -21,6 +21,15 @@ public class Triangle {
         color = "green";
         isVisible = false;
     }
+    public Triangle(int xPosition, int yPosition, int height, int width, String color)
+    {
+    this.xPosition = xPosition;
+    this.yPosition = yPosition;
+    this.height = height;
+    this.width = width;
+    this.color = color;
+    isVisible = false;
+    }
     public void teleport(int newX, int newY){
         xPosition = newX;
         yPosition = newY;

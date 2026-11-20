@@ -18,6 +18,16 @@ public class Circle {
         color = "blue";
         isVisible = false;
     }
+    
+    public Circle(int xPosition, int yPosition, int diameter, String color)
+    {
+    this.xPosition = xPosition;
+    this.yPosition = yPosition;
+    this.diameter = diameter;
+    this.color = color;
+    isVisible = false;
+    }
+    
     public double getArea(){
         double radius = diameter / 2.0;
         return Math.PI * radius * radius;

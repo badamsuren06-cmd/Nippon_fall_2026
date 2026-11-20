@@ -1,14 +1,13 @@
 #BlueJ class context
+#Fri Nov 20 08:46:09 ULAT 2026
 comment0.target=Hero
-comment0.text=\n\ Write\ a\ description\ of\ class\ Hero\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n Write a description of class Hero here.\r\n\r\n @author (your name)\r\n @version (a version number or a date)\r\n
 comment1.params=heroname
 comment1.target=Hero(java.lang.String)
-comment2.params=
 comment2.target=Hero()
 comment3.params=amount
-comment3.target=void\ findGold(int)
+comment3.target=void findGold(int)
 comment4.params=damage
-comment4.target=void\ takeDamage(int)
-comment5.params=
-comment5.target=void\ drinkPotion()
+comment4.target=void takeDamage(int)
+comment5.target=void drinkPotion()
 numComments=6

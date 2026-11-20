@@ -1,0 +1,14 @@
+#BlueJ class context
+#Fri Nov 20 09:19:34 ULAT 2026
+comment0.target=Picture
+comment0.text=\r\n Write a description of class Picture here.\r\n\r\n @author (your name)\r\n @version (a version number or a date)\r\n
+comment1.target=Picture()
+comment2.params=x y
+comment2.target=void drawTree(int, int)
+comment3.params=n
+comment3.target=void forest(int)
+comment4.target=void draw()
+comment5.target=void setNight()
+comment6.target=void setDay()
+comment7.target=Circle getSun()
+numComments=8

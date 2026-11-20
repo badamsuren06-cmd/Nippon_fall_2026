@@ -18,6 +18,14 @@ public class Square {
         color = "red";
         isVisible = false;
     }
+    public Square(int xPosition, int yPosition, int size, String color)
+    {
+    this.xPosition = xPosition;
+    this.yPosition = yPosition;
+    this.size = size;
+    this.color = color;
+    isVisible = false;
+    }
     public double getArea(){
         double radius = size / 2.0;
         return Math.PI * radius * radius;
