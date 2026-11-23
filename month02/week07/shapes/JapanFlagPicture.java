@@ -10,16 +10,13 @@ public class JapanFlagPicture {
     private Square flagLeft;
     private Square flagRight;
     private Circle redSun;
-    private Square pole1;
-    private Square pole2;
-
+    private boolean isVisible;
+    
     public JapanFlagPicture() {
         background = new Square();
         flagLeft = new Square();
         flagRight = new Square();
         redSun = new Circle();
-        pole1 = new Square();
-        pole2 = new Square();
     }
 
     public void draw() {
@@ -47,17 +44,12 @@ public class JapanFlagPicture {
         redSun.moveVertical(112);
         redSun.makeVisible();
         
-        pole1.changeColor("white");
-        pole1.changeSize(12);
-        pole1.moveHorizontal(220);
-        pole1.moveVertical(20);
-        pole1.makeVisible();
-
-        pole2.changeColor("white");
-        pole2.changeSize(12);
-        pole2.moveHorizontal(220);
-        pole2.moveVertical(32);
-        pole2.makeVisible();
+    }
+    private void erase(){
+        if (isVisible){
+          Canvas canvas = Canvas.getCanvas();
+          canvas.erase(this);
+    }
     }
 }
 

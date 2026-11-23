@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=BatteryTest
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ testInitialCharge()
+comment3.params=
+comment3.target=void\ testChargeBatteryNormal()
+comment4.params=
+comment4.target=void\ testChargeBatteryUpperCap()
+comment5.params=
+comment5.target=void\ testChargeBatteryInvalidZeroOrNegative()
+comment6.params=
+comment6.target=void\ testUseBatteryNormal()
+comment7.params=
+comment7.target=void\ testUseBatteryLowerCap()
+comment8.params=
+comment8.target=void\ testUseBatteryZeroOrNegative()
+numComments=9

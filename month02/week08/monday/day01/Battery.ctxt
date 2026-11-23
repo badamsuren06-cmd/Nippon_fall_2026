@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Battery
+comment0.text=\n\ Write\ a\ description\ of\ class\ Battery\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Battery()
+comment2.params=
+comment2.target=int\ getCharger()
+comment3.params=amount
+comment3.target=void\ chargeBattery(int)
+comment4.params=usage
+comment4.target=void\ useBattery(int)
+numComments=5
