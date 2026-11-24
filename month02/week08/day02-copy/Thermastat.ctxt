@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Thermastat
+comment0.text=\n\ Write\ a\ description\ of\ class\ Thermastat\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=int\ Thermostat()
+comment2.params=
+comment2.target=int\ getTemperature()
+comment3.params=
+comment3.target=void\ increaseMemp()
+comment4.params=
+comment4.target=void\ decreaseTemp()
+numComments=5

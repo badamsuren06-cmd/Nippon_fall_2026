@@ -14,19 +14,19 @@ import org.junit.jupiter.api.Test;
 public class StepcounterTest
 {
     @Test
-    public void Stepcount(){
-        
+    public void testAddPositiveAndIgnoreNegative(){
+        Stepcounter steps = new Stepcounter();
+        steps.addSteps(1000);
+        steps.addSteps(-1000);
+        assertEquals(1000, steps.getSteps());
     }
-//StepCounter — BlueJ тестийн тохиолдлууд (Тайлбар)
-//Эерэг алхам нэмэх ба сөрөг утгыг үл тоох тест:
+    
+    @Test
+    public void testReset(){
+        stepCounter steps = new Stepcounter();
+        steps.addSteps(500);
+        steps.reset();
+        assertEquals(0, steps.getSteps());
+    }
 
-//Зорилго: Эерэг алхмууд зөв нэмэгдэж, хасах утга орж ирэхэд алхмын тоо буурахгүй байхыг шалгана.
-
-//BlueJ дээрх шалгалт: Шинэ StepCounter объект (steps = 0) үүсгээд addSteps(250), дараа нь addSteps(-50) дуудсаны дараа getSteps() нь 250 байхыг хүлээнэ.
-
-//Алхмыг тэглэх (reset) тест:
-
-//Зорилго: Хуримтлагдсан алхмуудыг reset() дуудаж 0 болгож цэвэрлэж байгааг шалгана.
-
-//BlueJ дээрх шалгалт: Алхам нэмсний дараа reset() дуудахад getSteps() нь 0 буцаахыг хүлээнэ.
 }

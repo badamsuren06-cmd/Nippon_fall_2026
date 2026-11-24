@@ -7,7 +7,7 @@
  */
 public class ParkingMeter
 {
-    private double minutes; 
+    private int minutes; 
 
     public ParkingMeter(){
         minutes = 0; 
@@ -15,6 +15,11 @@ public class ParkingMeter
 
     public double getMinutes(){
         return minutes;
+    }
+    public void addMinutes(int addedMinutes){
+        if (addedMinutes > 0){
+            minutes += addedMinutes;
+        }
     }
 
     public void addTime(int mins){
