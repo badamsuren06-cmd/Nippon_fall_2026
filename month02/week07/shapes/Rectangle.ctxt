@@ -1,22 +1,18 @@
 #BlueJ class context
+#Wed Nov 25 21:56:08 ULAT 2026
 comment0.target=Rectangle
-comment0.text=\n\ Write\ a\ description\ of\ class\ rectangle\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
+comment0.text=\r\n Write a description of class rectangle here.\r\n\r\n @author (your name)\r\n @version (a version number or a date)\r\n
 comment1.target=Rectangle()
-comment2.params=
-comment2.target=void\ makeVisible()
-comment3.params=
-comment3.target=void\ makeInvisible()
-comment4.params=newWidth\ newHeight
-comment4.target=void\ changeSize(int,\ int)
+comment2.target=void makeVisible()
+comment3.target=void makeInvisible()
+comment4.params=newWidth newHeight
+comment4.target=void changeSize(int, int)
 comment5.params=newColor
-comment5.target=void\ changeColor(java.lang.String)
+comment5.target=void changeColor(java.lang.String)
 comment6.params=distance
-comment6.target=void\ moveHorizontal(int)
+comment6.target=void moveHorizontal(int)
 comment7.params=distance
-comment7.target=void\ moveVertical(int)
-comment8.params=
-comment8.target=void\ draw()
-comment9.params=
-comment9.target=void\ erase()
+comment7.target=void moveVertical(int)
+comment8.target=void draw()
+comment9.target=void erase()
 numComments=10

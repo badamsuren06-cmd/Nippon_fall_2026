@@ -1,10 +1,8 @@
 #BlueJ class context
+#Wed Nov 25 21:56:06 ULAT 2026
 comment0.target=JapanFlagPicture
-comment0.text=\n\ Write\ a\ description\ of\ class\ JapanFlagPicture\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
+comment0.text=\r\n Write a description of class JapanFlagPicture here.\r\n\r\n @author (your name)\r\n @version (a version number or a date)\r\n
 comment1.target=JapanFlagPicture()
-comment2.params=
-comment2.target=void\ draw()
-comment3.params=
-comment3.target=void\ erase()
+comment2.target=void draw()
+comment3.target=void erase()
 numComments=4
